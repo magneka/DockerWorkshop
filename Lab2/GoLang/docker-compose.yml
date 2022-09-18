@@ -1,0 +1,20 @@
+version: "3.9"
+
+services:
+  golang01:  
+    # Specify the image to start the container from   
+    image: golang:1.14.12-stretch
+    #build:
+    #  context: .
+    #  dockerfile: Dockerfile
+
+    container_name: golang01
+    tty: true
+
+    # Mount host directories to container directories
+    volumes:
+      - ./source:/source
+
+    # Expose ports (HOST:CONTAINER)
+    ports:
+      - 9000:9000

@@ -1,0 +1,20 @@
+Førtst må du bygge containeren:
+:docker build -t hellofortran1 .
+
+Du kan kjøre containeren, merk at den gjør jobben og stopper umiddelbart
+:docker run hellofortran1
+
+Du kan også kjøre containeren, og gi deg et shell istedenfor å avslutte:
+:docker run -i hellofortran1 bash
+
+kjør i docker shell
+:ls
+:./HelloWorld
+:cat IAmHere.txt
+:exit
+
+ Kjør docker run kommandoen igjen
+ :docker run hellofortran1
+
+ merk at nå er IAmHere.txt borte igjen, når du står på utsiden.
+ Dette er vegas prinsippet, what happens in Vegas, stays in Vegas.

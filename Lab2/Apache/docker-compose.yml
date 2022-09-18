@@ -1,0 +1,22 @@
+version: '3.9'
+
+services:
+  apacheperl:
+    # Specify the image to start the container from
+    #image: apacheperl
+    # Configuration options that are applied at build time.
+    build: 
+      context: .
+      dockerfile: Dockerfile
+    # Map local folder to internal folder
+    # Note using "." for current folder
+    volumes:
+      - ./source/www:/var/www/html
+    # Map external port to internal port
+    ports:
+      - 8097:80
+    environment:
+      - LC_CTYPE=nb_NO.UTF-8
+      - LC_ALL=nb_NO.UTF-8
+    command:  /usr/sbin/apache2ctl -D FOREGROUND
+

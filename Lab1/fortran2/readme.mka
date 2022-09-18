@@ -1,0 +1,7 @@
+docker build -t hellofortran2 .
+
+mac
+docker run --rm -v $(pwd):/fortran hellofortran2
+
+win
+docker run --rm -v %(cd)%:/fortran hellofortran2

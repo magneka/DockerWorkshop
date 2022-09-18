@@ -1,0 +1,19 @@
+version: '3.9'
+
+services:
+  pythondockerlab:
+   
+    container_name: python01
+    
+    build: 
+      context: .
+      dockerfile: Dockerfile
+   
+    tty: true        # docker run -t
+
+    # Map external port to internal port
+    ports:
+      - 8099:80
+
+    volumes:
+      - ./source:/source/      

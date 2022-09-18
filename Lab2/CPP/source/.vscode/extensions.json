@@ -1,0 +1,7 @@
+{
+    "recommendations": [
+        "tchojnacki.cpp-compile",
+        "ms-vscode.cpptools",
+        "franneck94.c-cpp-runner"
+    ]
+}

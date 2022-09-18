@@ -1,0 +1,18 @@
+version: '3.7'
+
+services:
+  phplab:
+    container_name: phplab01
+    image: "php:7.0-apache"
+
+    # Stop i shell
+    tty: true 
+    
+    ports:
+      - 3021:80
+
+    volumes:
+      - './source:/var/www/html'
+
+
+  
