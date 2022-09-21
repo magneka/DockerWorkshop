@@ -1,0 +1,40 @@
+Started GET "/say" for 127.0.0.1 at 2022-09-21 19:22:27 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/say"):
+  
+Started POST "/say" for 127.0.0.1 at 2022-09-21 19:22:34 +0000
+Processing by CowController#say as */*
+Completed 500 Internal Server Error in 26ms (Allocations: 1133)
+
+
+  
+NoMethodError (undefined method `length' for nil:NilClass):
+  
+app/controllers/cow_controller.rb:4:in `say'
+Started POST "/say" for 127.0.0.1 at 2022-09-21 19:23:02 +0000
+Processing by CowController#say as */*
+  Parameters: {"message"=>"Hello from RapidAPI", "cow"=>{"message"=>"Hello from RapidAPI"}}
+No template found for CowController#say, rendering head :no_content
+Completed 204 No Content in 37ms (Allocations: 1798)
+
+
+Started GET "/say" for 127.0.0.1 at 2022-09-21 19:23:09 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/say"):
+  
+Started POST "/say" for 127.0.0.1 at 2022-09-21 19:24:17 +0000
+Processing by CowController#say as */*
+  Parameters: {"message"=>"Hello from RapidAPI", "cow"=>{"message"=>"Hello from RapidAPI"}}
+  Rendering cow/say.json.jbuilder
+  Rendered cow/say.json.jbuilder (Duration: 26.8ms | Allocations: 417)
+Completed 200 OK in 141ms (Views: 83.1ms | Allocations: 3968)
+
+
+Started POST "/say" for 127.0.0.1 at 2022-09-21 19:24:57 +0000
+Processing by CowController#say as */*
+  Parameters: {"message"=>"Hello from RapidAPI", "cow"=>{"message"=>"Hello from RapidAPI"}}
+  Rendering cow/say.json.jbuilder
+  Rendered cow/say.json.jbuilder (Duration: 8.1ms | Allocations: 116)
+Completed 200 OK in 39ms (Views: 26.9ms | Allocations: 2025)
+
+

@@ -1,0 +1,21 @@
+version: "3.9"
+
+services:  
+  rubyrailslab01:
+    
+    # Go to dockerhub and find the image for dotnet sdk 6.0
+    image: ruby:2.7.6
+    container_name: rubylab01
+
+    tty: true
+    
+    # Configuration options that are applied at build time.    
+    ports:
+      - 30051:3000
+    
+    # Set environment variables
+    
+    # Mount host directories to container directories
+    volumes:
+      - './source:/source'
+      - '/source/cow_say/tmp'
