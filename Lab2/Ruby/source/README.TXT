@@ -1,7 +1,9 @@
 https://rapidapi.com/blog/how-to-build-an-api-in-ruby/
 
 Må installere rails, kunne det vært gjort med en dockerfile?
+Må nå gjøres hver gang containeren startes på nytt
 gem install rails
+gem install debug
 
 Lag nytt prosjekt
 :rails new cow_say --api --skip-active-record

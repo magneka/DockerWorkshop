@@ -38,3 +38,27 @@ Processing by CowController#say as */*
 Completed 200 OK in 39ms (Views: 26.9ms | Allocations: 2025)
 
 
+Started POST "/say" for 127.0.0.1 at 2022-09-21 19:41:04 +0000
+Processing by CowController#say as */*
+  Parameters: {"message"=>"Hello from RapidAPI", "cow"=>{"message"=>"Hello from RapidAPI"}}
+  Rendering cow/say.json.jbuilder
+  Rendered cow/say.json.jbuilder (Duration: 22.6ms | Allocations: 418)
+Completed 200 OK in 75ms (Views: 48.3ms | Allocations: 4114)
+
+
+Started POST "/say" for 127.0.0.1 at 2022-09-21 19:43:46 +0000
+Processing by CowController#say as */*
+  Parameters: {"message"=>"Hello from RapidAPI", "cow"=>{"message"=>"Hello from RapidAPI"}}
+  Rendering cow/say.json.jbuilder
+  Rendered cow/say.json.jbuilder (Duration: 6.2ms | Allocations: 116)
+Completed 200 OK in 49ms (Views: 30.1ms | Allocations: 2023)
+
+
+Started POST "/say" for 127.0.0.1 at 2022-09-21 19:45:13 +0000
+Processing by CowController#say as */*
+  Parameters: {"message"=>"Hello from RapidAPI", "cow"=>{"message"=>"Hello from RapidAPI"}}
+  Rendering cow/say.json.jbuilder
+  Rendered cow/say.json.jbuilder (Duration: 0.3ms | Allocations: 40)
+Completed 200 OK in 71ms (Views: 16.1ms | Allocations: 1379)
+
+
