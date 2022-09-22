@@ -4,7 +4,7 @@ services:
   dotnetlab01:
     
     # Go to dockerhub and find the image for dotnet sdk 6.0
-    image: "mcr.microsoft.com/dotnet/sdk:6.0"
+    image: "<finn container på dockerhub>"
     container_name: minimalapi60
 
     tty: true
@@ -12,10 +12,9 @@ services:
     remoteUser: magnea
     
     # Configuration options that are applied at build time.    
-    ports:
-      - 3000:80
-      - 3001:443
-    
+    #ports:
+    #  - 3000:80
+        
     # Set environment variables
     environment:
       - ASPNETCORE_ENVIRONMENT=Development

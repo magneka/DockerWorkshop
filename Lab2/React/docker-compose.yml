@@ -3,21 +3,24 @@ version: "3.9"
 services:
   reactapp01:
     # Specify the image to start the container from
-    image: node:alpine3.15
+    image: "Finn en container på dockerhub"
     container_name: reactapp01
     tty: true
 
     # Expose ports (HOST:CONTAINER)
-    ports:
-      - 3000:3000
+    #ports:
+    #  - 3000:3000
 
     # Set environment variables
     #environment:
 
     # Mount host directories to container directories
     volumes:
-      - ./source:/source
+      - "./source:/source"
+      #Blokker NPM katalogen ut av containeren enten sånn
       - npm-volume:/source/docktest/node_modules
+      #eller sånn, hva blir forskjellen??
+      # - "/source/docktest/node_modules"
 
 volumes:
   npm-volume:

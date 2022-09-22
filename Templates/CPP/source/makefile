@@ -1,8 +1,11 @@
-#simple make for helloworld
+CC=/usr/bin/g++-9
+CFLAGS=-Wall
+
+all: HelloWorld
 HelloWorld: HelloWorld.o
-	g++ -o HelloWorld ./build/HelloWorld.o
-HelloWorld.o: HelloWorld.cpp
-	g++ -c -g HelloWorld.cpp HelloWorld
+HelloWorld.o: HelloWorld.cpp 
+
 clean:
 	rm -f HelloWorld HelloWorld.o
-#end of makefile
+run: HelloWorld
+	./HelloWorld

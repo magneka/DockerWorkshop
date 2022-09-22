@@ -25,24 +25,6 @@
             "sourceFileMap": {
                 "/Views": "${workspaceFolder}/Views"
             }
-        },
-        {
-            "type": "dotnetwatchattach",
-            "request": "launch",
-            "name": ".NET Watch Attach",
-            "args": { // Args to pass to coreclr attach
-              "env": {
-                "ASPNETCORE_ENVIRONMENT": "Development"
-              }
-            },
-            "task": "MinApi", // Label of watch task in tasks.json
-            "program": "/MinApi/MinApi" // for windows Or "<startup-project-name>" for linux
-          
-        },
-        {
-            "name": ".NET Core Attach",
-            "type": "coreclr",
-            "request": "attach"
         }
     ]
 }

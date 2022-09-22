@@ -2,13 +2,24 @@
     "version": "2.0.0",
     "tasks": [
         {
-            "type": "shell",
-            "label": "g++ build active file",
-            "command": "make",
+            "type": "cppbuild",
+            "label": "C/C++: g++-9 build active file",
+            "command": "/usr/bin/g++-9",
             "args": [
-               
+                "-fdiagnostics-color=always",
+                "-g",
+                "${file}",
+                "-o",
+                "${fileDirname}/${fileBasenameNoExtension}"
             ],
-            "group": "build"
+            "options": {
+                "cwd": "${fileDirname}"
+            },
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "group": "build",
+            "detail": "compiler: /usr/bin/g++-9"
         }
     ]
 }

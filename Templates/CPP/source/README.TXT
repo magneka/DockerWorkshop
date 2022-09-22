@@ -1,7 +1,13 @@
 Du kan stå i helloworld.cpp koden, og starte debug.
-Da kjøres make og gdb.
+Da bygges det vha av en task (se tasks.json og launch.json)
 
-Du kan rydde opp med "make clean"
+Alternativt kan du bruke make for å bygge slik
+:cd /source
+:make 
+
+Rydd opp
+:make clean
+
 
 TODO:
     _ bygg til build folder
