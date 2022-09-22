@@ -1,0 +1,23 @@
+version: "3.9"
+
+services:
+  reactapp01:
+    # Specify the image to start the container from
+    image: node:alpine3.15
+    container_name: reactapp01
+    tty: true
+
+    # Expose ports (HOST:CONTAINER)
+    ports:
+      - 3000:3000
+
+    # Set environment variables
+    #environment:
+
+    # Mount host directories to container directories
+    volumes:
+      - ./source:/source
+      - npm-volume:/source/docktest/node_modules
+
+volumes:
+  npm-volume:

@@ -1,0 +1,1 @@
+Du må google for å finne docker image for .NET CORE 6.0 SDK
