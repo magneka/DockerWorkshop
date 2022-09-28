@@ -9,12 +9,12 @@ services:
 
     tty: true
 
-    remoteUser: magnea
+    #remoteUser: magnea
     
     # Configuration options that are applied at build time.    
     ports:
-      - 3000:80
-      - 3001:443
+      - 3000:5059
+      - 3001:7212
     
     # Set environment variables
     environment:
@@ -24,9 +24,13 @@ services:
     # Mount host directories to container directories
     volumes:
       - ./source:/source
-      - obj-volume:/minimalapi/obj
-      - bin-volume:/minimalapi/bin
+      # Vegas prinsippet på binærkatalog
+      - '/source/MinApi/obj'
+      - '/source/MinApi/bin'
+      # Eller lagre filer i egne persistente volumer?
+      #- obj-volume:/source/MinApi/obj
+      #- bin-volume:/source/MinApi/bin
 
-volumes:
-  obj-volume:
-  bin-volume:
+#volumes:
+#  obj-volume:
+#  bin-volume:
