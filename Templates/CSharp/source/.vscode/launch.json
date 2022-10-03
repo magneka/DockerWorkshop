@@ -35,8 +35,8 @@
                 "ASPNETCORE_ENVIRONMENT": "Development"
               }
             },
-            "task": "MinApi", // Label of watch task in tasks.json
-            "program": "/MinApi/MinApi" // for windows Or "<startup-project-name>" for linux
+            "task": "watch", // Label of watch task in tasks.json
+            "program": "/source/MinApi/MinApi" // for windows Or "<startup-project-name>" for linux
           
         },
         {

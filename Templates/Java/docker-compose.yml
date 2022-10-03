@@ -1,35 +1,38 @@
 version: "3.9"
 
 services:  
-  dotnetlab01:
+  javamvn11:
     
     # Go to dockerhub and find the image for dotnet sdk 6.0
-    image: "mcr.microsoft.com/dotnet/sdk:6.0"
-    container_name: minimalapi60
+    image: "maven:3.8.6-jdk-11"
+    container_name: javamvn11
 
-    tty: true
+    stdin_open: true # docker run -i
+    tty: true        # docker run -t
 
-    #remoteUser: magnea
+
     
     # Configuration options that are applied at build time.    
-    ports:
-      - 3000:5059
-      - 3001:7212
+    #ports:
+    #  - 3000:5059
+    #  - 3001:7212
     
     # Set environment variables
-    environment:
-      - ASPNETCORE_ENVIRONMENT=Development
-      - DOTNET_RUNNING_IN_CONTAINER=compose
+    #environment:
+    #  - ASPNETCORE_ENVIRONMENT=Development
+    #  - DOTNET_RUNNING_IN_CONTAINER=compose
     
     # Mount host directories to container directories
     volumes:
       - ./source:/source
       # Vegas prinsippet på binærkatalog
-      - '/source/MinApi/obj'
-      - '/source/MinApi/bin'
+    #  - '/source/MinApi/obj'
+    #  - '/source/MinApi/bin'
       # Eller lagre filer i egne persistente volumer?
       #- obj-volume:/source/MinApi/obj
       #- bin-volume:/source/MinApi/bin
+
+    command: ["sh"]
 
 #volumes:
 #  obj-volume:
