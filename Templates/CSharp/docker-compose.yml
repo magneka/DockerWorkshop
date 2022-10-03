@@ -9,7 +9,7 @@ services:
 
     tty: true
 
-    remoteUser: magnea
+    #remoteUser: magnea
     
     # Configuration options that are applied at build time.    
     ports:
