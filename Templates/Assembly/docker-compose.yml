@@ -1,0 +1,22 @@
+version: '3.9'
+
+services:
+  ubuntuasm:
+    container_name: helloassembly
+
+    # Specify the image to start the container from   
+    build: 
+      context: .
+      dockerfile: Dockerfile
+
+    # Stop i shell
+    tty: true 
+    
+    # Map local folder to internal folder
+    # Note using "." for current folder
+    volumes:
+      - ./source:/source
+
+    
+    
+
