@@ -1,0 +1,26 @@
+version: "3.9"
+
+services:  
+  javaspringboot171:
+    
+    # Go to dockerhub and find the image for dotnet sdk 6.0
+    image: "eclipse-temurin:17-jdk-focal"
+    container_name: javasptemurin
+
+    stdin_open: true # docker run -i
+    tty: true        # docker run -t
+    
+    # Configuration options that are applied at build time.    
+    ports:
+      - 8082:8080
+        
+    # Mount host directories to container directories
+    volumes:
+      - ./source:/source
+
+      # Vegas prinsippet på binærkatalog
+      - /source/target
+  
+
+    command: ["sh"]
+
