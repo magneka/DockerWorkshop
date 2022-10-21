@@ -1,5 +1,5 @@
 # Download base image ubuntu 20.04
-FROM ubuntu:20.04
+FROM ubuntu:18.04
 
 # Disable Prompt During Packages Installation
 ARG DEBIAN_FRONTEND=noninteractive
