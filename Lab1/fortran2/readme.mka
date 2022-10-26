@@ -1,3 +1,4 @@
+Den gamle måten vha "docker" kommandoen er:
 docker build -t hellofortran2 .
 
 mac
@@ -5,3 +6,21 @@ docker run --rm -v $(pwd):/fortran hellofortran2
 
 win
 docker run --rm -v %(cd)%:/fortran hellofortran2
+
+Men du kan også bruke docker-compose som er mye enkler
+(men du må stå i katalogen med docker-compose.yml filen):
+docker-compose up
+
+for å ta ned 
+docker-compose down
+
+Eller enda enklere:
+Når du har installert docker extension i VS Code, 
+kan du høyreklikke på en dockerfile og velge
+compose up/down.
+
+Sjekk options for docker-compose kommandoen her:
+
+Merk at av og til om du gjør endringer i dockerfilene, må du kjøre
+docker-compose up --force-recreate 
+
