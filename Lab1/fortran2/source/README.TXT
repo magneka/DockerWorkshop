@@ -1,6 +1,6 @@
-Installer Modern Fortran extension
+Installer Modern Fortran extension, samt Fortran extension (klikk på byggeklossene)
   - Merk at du kan installere den INNI containeren
-  - Merk at du også kan legge dent til i extensions.json filen
+  - Merk at du også kan legge den til i workspace recomenndation filen til vs code
     Da dukker den opp hver gang du kjører containeren
 
 Du kan bygge programmet ved å kjøre 

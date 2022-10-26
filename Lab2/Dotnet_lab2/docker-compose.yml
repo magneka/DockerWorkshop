@@ -1,15 +1,14 @@
 version: "3.9"
 
 services:  
-  dotnetlab01:
+  dotnetlab02:
     
     # Go to dockerhub and find the image for dotnet sdk 6.0
     image: "<finn container på dockerhub>"
     container_name: minimalapi60
 
     tty: true
-
-    remoteUser: magnea
+    
     
     # Configuration options that are applied at build time.    
     #ports:
@@ -23,8 +22,13 @@ services:
     # Mount host directories to container directories
     volumes:
       - ./source:/source
+      # Blokker binærkataloger (her må du fikse litt selv)
       - obj-volume:/minimalapi/obj
       - bin-volume:/minimalapi/bin
+      #Blokker NPM katalogen ut av containeren enten sånn
+      # - npm-volume:/source/minimalapi/obj
+      #eller sånn, hva blir forskjellen??
+      # - "/source/minimalapi/obj"
 
 volumes:
   obj-volume:
