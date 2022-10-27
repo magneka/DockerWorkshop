@@ -1,1 +1,0 @@
-https://dev.to/gombosg/running-macos-inside-linux-with-docker-osx-4e1i

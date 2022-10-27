@@ -1,1 +1,0 @@
-mvn archetype:generate -DgroupId=com.javatpoint -DartifactId=CubeGenerator -DarchetypeArtifactId=maven-archetype-webapp -DinteractiveMode=false  
